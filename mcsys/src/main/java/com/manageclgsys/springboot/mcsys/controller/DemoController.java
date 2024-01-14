@@ -11,5 +11,13 @@ public class DemoController {
             themModel.addAttribute("theDate",new java.util.Date());
             return "/helloworld";
         }
+            @GetMapping("/login")
+        public String login(){
+                return "/login";
+            }
+            @GetMapping("/about")
+         public String about(){
+                return "/about";
+             }
     }
 

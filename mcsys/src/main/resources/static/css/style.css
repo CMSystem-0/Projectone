@@ -1,71 +1,103 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"Poppins",sans-serif;
+    font-family: 'poppins', sans-serif;
 }
-body{
-    min-height: 100vh;
-    /* background-image: url("../images/background.png");*/
-    text-decoration-style: solid;
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), transparent),url("../Images/bg1.jpg");
     background-size: cover;
     background-position: center;
+    padding: 0 5%;
+    position: relative;
 }
-.header{
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: transparent;
+nav{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
     align-items: center;
-    z-index: 100;
-
+    flex-wrap: wrap;
+    padding: 5px 0;
 }
 .logo{
-    font-size: 32px;
+      width: 150px;
+      height: auto;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
-
-
-}
-.img {
-    vertical-align:top;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
-  }
-.navbar a {
     position: relative;
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
+    
 }
-.navbar a::before{
+nav ul li a::after{
     content: '';
+    width: 50%;
+    height: 3px;
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #fff;
-    transition: .3s;
 }
-.navbar a:hover::before{
 
-    width: 100%;
+.text-box{
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+}
 
+.text-box h1{
+    font-size: 100px;
+    line-height: 100px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url("../Images/446620.jpg");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
 }
-h1{
-    color: #fff;
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
 }
-p{
+
+.text-box h4{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text-box a{
     color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+.text-box a span{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 20px;
 }
